@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
-const App = () => {
-    return (
-        <div>
-            Hello
-        </div>
-    )
-}
+import App from './containers/App';
 
 ReactDOM.render(<App />, document.getElementById("container"));
 
