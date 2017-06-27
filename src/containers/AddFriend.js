@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Navbar, Button, FormControl, FormGroup } from 'react-bootstrap';
-import AddFriend from '../actions/AddFriendAction';
+import * as friend from '../actions/FriendsAction';
 
 let AddFriendForm = ({ dispatch }) => {
     let input;
@@ -11,7 +11,7 @@ let AddFriendForm = ({ dispatch }) => {
                 <FormControl type="text" inputRef={ref => { input = ref; }} placeholder="Type Name" />
             </FormGroup>
             {' '}
-            <Button type="submit" bsStyle="primary" onClick={() => { dispatch(AddFriend(input.value)); input.value='';}}> Add Friend </Button>
+            <Button type="submit" bsStyle="primary" onClick={() => { dispatch(friend.AddFriend(input.value)); input.value='';}}> Add Friend </Button>
         </Navbar.Form>
     );
 }
