@@ -1,10 +1,12 @@
 import React from 'react';
-import AppNav from './Navbar';
+import FriendsbookNav from '../components/FriendsbookNav';
+import FriendList from './FriendList';
 
 const App = () => {
     return(
         <div>
-            <AppNav />
+            <FriendsbookNav />
+            <FriendList />
         </div>
     )
 }

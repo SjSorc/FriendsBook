@@ -1,16 +1,15 @@
 import * as type from '../constants/ActionTypes';
 
-const FriendsReducer = (state = [], action) => {
+export default function friends(state = [], action){
     switch(action.type){
         case type.ADD_FRIEND: 
             return [
                 ...state,
-                { friendId: action.id, name: action.name, image: action.image, isBestFriend: false }
+                { friendId: action.id, name: action.name, image: action.image, isBestFriend: action.isBestFriend }
             ];
         case type.DELETE_FRIEND: 
             return state.filter(friend => friend.id !== action.id);
-
+        default: 
+            return state;
     }
 }
-
-export default FriendsReducers;
